@@ -16,3 +16,15 @@ Route::get('/', function () {
 });
 
 Route::get('/films/{id}', 'FilmController@show');
+	
+Route::get('/createfilms', function () {
+    return view('layouts.createFilm');
+});
+
+// Route::get('/registration', function () {
+//     return view('layouts.registration');
+// });
+
+
+Route::get('/register', 'RegisterController@create');
+Route::post('/register', 'RegisterController@store');
