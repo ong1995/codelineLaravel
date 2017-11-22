@@ -14,6 +14,16 @@ class Film extends Resource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+        'id' => $this->id,
+        'name' => $this->name,
+        'description' => $this->description,
+        'realeaseDate' => $this->realease_date,
+        'rating' => $this->rating,
+        'ticketPrice' => $this->ticket_price,
+        'country' => $this->country,
+        'genre' => $this->genre,
+        'photo' => utf8_encode($this->photo),
+        ];
     }
 }
