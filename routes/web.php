@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/films/{id}', 'FilmController@show');
+Route::get('/films', 'FilmController@getFilmList');
 	
 Route::get('/createfilms', function () {
     return view('layouts.createFilm');
