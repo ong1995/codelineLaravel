@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Resources;
-
 use Illuminate\Http\Resources\Json\Resource;
 
 class Film extends Resource
@@ -18,7 +17,7 @@ class Film extends Resource
         'id' => $this->id,
         'name' => $this->name,
         'description' => $this->description,
-        'realeaseDate' => $this->realease_date,
+        'releaseDate' => $this->release_date,
         'rating' => $this->rating,
         'ticketPrice' => $this->ticket_price,
         'country' => $this->country,
