@@ -8,8 +8,10 @@ use Illuminate\Http\Request;
 
 class FilmController extends Controller
 {
-   public function show($id)
-   {
-   		return new FilmResource(Film::find($id));
-   }
+	public function show($id)
+	{
+
+		$data =  new FilmResource(Film::find($id));
+		return view('layouts.films',  ['data' => $data]);
+	}
 }

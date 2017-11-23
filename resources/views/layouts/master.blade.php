@@ -11,6 +11,8 @@
 	<!-- Google Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('public/css/style.css') }}">
 </head>
 <body class="container">
 	@yield('body')

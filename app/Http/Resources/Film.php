@@ -23,7 +23,7 @@ class Film extends Resource
         'ticketPrice' => $this->ticket_price,
         'country' => $this->country,
         'genre' => $this->genre,
-        'photo' => utf8_encode($this->photo),
+        'photo' => $this->photo,
         ];
     }
 }
