@@ -12,11 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('authentication.login');
+    return view('auth.login');
+});
+
+Route::get('/login', function () {
+    return view('auth.login');
 });
 
 Route::get('/films/create', function () {
-    return view('layouts.createFilm');
+    return view('films.createFilm');
 });
 
 Route::get('/films/{slug}', 'FilmController@show')->name('film');
@@ -25,5 +29,6 @@ Route::get('/films', 'FilmController@getFilmList');
 Route::post('/createFilms', 'CreateFilmController@store');	
 
 /* Registration */ 
-Route::get('/register', 'RegisterController@create')->name('registration');
-Route::post('/register', 'RegisterController@store');	
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

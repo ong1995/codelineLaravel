@@ -3,7 +3,7 @@
 Create film
 @endsection
 
-@section('body')
+@section('content')
 <div class="text-center">
 	<h2>Add Films</h2>
 </div>

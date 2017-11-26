@@ -16,7 +16,7 @@ class FilmController extends Controller
 		$data['release_date'] = $date->year;	
 
 		$data['release_date'] = self::yearOnly($data->releaseDate);  
-		return view('layouts.films',  ['data' => $data]);
+		return view('films.films',  ['data' => $data]);
 	}
 
 	public function getFilmList()
