@@ -12,20 +12,18 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('authentication.login');
 });
 
-Route::get('/films/{id}', 'FilmController@show');
-Route::get('/films', 'FilmController@getFilmList');
-	
-Route::get('/createfilms', function () {
+Route::get('/films/create', function () {
     return view('layouts.createFilm');
 });
 
-// Route::get('/registration', function () {
-//     return view('layouts.registration');
-// });
+Route::get('/films/{slug}', 'FilmController@show')->name('film');
+Route::get('/films', 'FilmController@getFilmList');
 
+Route::post('/createFilms', 'CreateFilmController@store');	
 
-Route::get('/register', 'RegisterController@create');
-Route::post('/register', 'RegisterController@store');
+/* Registration */ 
+Route::get('/register', 'RegisterController@create')->name('registration');
+Route::post('/register', 'RegisterController@store');	

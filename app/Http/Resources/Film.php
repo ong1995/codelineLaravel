@@ -16,6 +16,7 @@ class Film extends Resource
         return [
         'id' => $this->id,
         'name' => $this->name,
+        'slug' => $this->slug,
         'description' => $this->description,
         'releaseDate' => $this->release_date,
         'rating' => $this->rating,

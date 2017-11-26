@@ -9,11 +9,11 @@ use Illuminate\Http\Request;
 
 class FilmController extends Controller
 {
-	public function show($id)
+	public function show($slug)
 	{
-		$data =  new FilmResource(Film::find($id));
-		// $date = new Carbon($data->releaseDate);
-		// $data['release_date'] = $date->year;	
+		$data =  new FilmResource(Film::where('slug', $slug)->first());
+		$date = new Carbon($data->releaseDate);
+		$data['release_date'] = $date->year;	
 
 		$data['release_date'] = self::yearOnly($data->releaseDate);  
 		return view('layouts.films',  ['data' => $data]);
@@ -26,7 +26,6 @@ class FilmController extends Controller
 		foreach ($data as $key) {
 			$index = 0;
 			foreach ($key as $value) {
-			 	// $item[] = self::yearOnly($value->releaseDate);
 				$data[$index++]['release_date'] = self::yearOnly($value->releaseDate);
 			} 
 		}
