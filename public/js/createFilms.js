@@ -16,20 +16,24 @@ $(document).ready(function(){
 		formData.append('rating', $("input[name='rate']:checked").val());
 
 		console.log($('form').serialize());
-		// $.ajax({
-		// 	url: util.url+"/createFilms",
-		// 	type: 'POST',
-		// 	data: formData,
-		// 	async: false,
-		// 	success: function (data) {
-		// 		console.log(data);
-		// 	},
-		// 	error: function (data,a,b){
-		// 		console.log(data,a,b);
-		// 	},
-		// 	contentType: false,
-		// 	processData: false	
-		// });
+		$.ajax({
+			url: util.url+"/createFilms",
+			type: 'POST',
+			data: formData,
+			async: false,
+			success: function (data) {
+				$('#notification').show('fast');
+				$('#notification').removeClass();
+				$('#notification').addClass('alert alert-success');
+				$('#notification h3').text(data + ' film successfully added.');
+				setTimeout($('#notification').hide(), 5000);
+			},
+			error: function (data,a,b){
+				console.log(data,a,b);
+			},
+			contentType: false,
+			processData: false	
+		});
 	});
 
 

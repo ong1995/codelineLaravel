@@ -30,7 +30,7 @@ class CreateFilmController extends Controller
 			'photo' => $request->file('photo')->getClientOriginalName()
 			]);		
 
-		return "success";
+		return $request->name;
 
 
 

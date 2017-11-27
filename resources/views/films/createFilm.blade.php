@@ -7,8 +7,8 @@ Create film
 <div class="text-center">
 	<h2>Add Films</h2>
 </div>
-<div id="notification">
-	
+<div id="notification" style="display: none;">
+	<h3></h3>
 </div>
 <form>
 	<div class="row">
