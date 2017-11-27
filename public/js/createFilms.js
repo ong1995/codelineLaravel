@@ -15,20 +15,21 @@ $(document).ready(function(){
 		formData.append('genre', $('#filmGenre').val());
 		formData.append('rating', $("input[name='rate']:checked").val());
 
-		$.ajax({
-			url: util.url+"/createFilms",
-			type: 'POST',
-			data: formData,
-			async: false,
-			success: function (data) {
-				console.log(data);
-			},
-			error: function (data,a,b){
-				console.log(data,a,b);
-			},
-			contentType: false,
-			processData: false	
-		});
+		console.log($('form').serialize());
+		// $.ajax({
+		// 	url: util.url+"/createFilms",
+		// 	type: 'POST',
+		// 	data: formData,
+		// 	async: false,
+		// 	success: function (data) {
+		// 		console.log(data);
+		// 	},
+		// 	error: function (data,a,b){
+		// 		console.log(data,a,b);
+		// 	},
+		// 	contentType: false,
+		// 	processData: false	
+		// });
 	});
 
 

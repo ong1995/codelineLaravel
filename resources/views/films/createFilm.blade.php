@@ -7,6 +7,9 @@ Create film
 <div class="text-center">
 	<h2>Add Films</h2>
 </div>
+<div id="notification">
+	
+</div>
 <form>
 	<div class="row">
 		<div class="col-md-6">
