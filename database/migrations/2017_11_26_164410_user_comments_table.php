@@ -18,6 +18,7 @@ class UserCommentsTable extends Migration
             $table->integer('user_id');
             $table->integer('film_id');
             $table->string('comment');
+            $table->timestamps();
         });
     }
 

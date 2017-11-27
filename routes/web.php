@@ -28,6 +28,8 @@ Route::get('/films', 'FilmController@getFilmList');
 
 Route::post('/createFilms', 'CreateFilmController@store');	
 
+Route::post('films/comment', 'CommentController@postComment');
+
 /* Registration */ 
 Auth::routes();
 

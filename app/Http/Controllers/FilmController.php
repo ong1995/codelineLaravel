@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Film;
+use App\Comment;
 use Carbon\Carbon;
 use App\Http\Resources\Film as FilmResource;
 use Illuminate\Http\Request;
+
 
 class FilmController extends Controller
 {
@@ -16,7 +18,11 @@ class FilmController extends Controller
 		$data['release_date'] = $date->year;	
 
 		$data['release_date'] = self::yearOnly($data->releaseDate);  
-		return view('films.films',  ['data' => $data]);
+
+		$comments  = Comment::where('film_id', $data->id)->orderBy('created_at', 'desc')->get();
+		return view('films.films',  ['data' => $data, 
+							'comments' => $comments
+						]);
 		
 	}
 
