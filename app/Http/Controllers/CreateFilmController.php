@@ -28,7 +28,7 @@ class CreateFilmController extends Controller
 			'country' => $request->country,
 			'genre' => $request->genre,
 			'photo' => $request->file('photo')->getClientOriginalName()
-			]);
+			]);		
 
 		return "success";
 
