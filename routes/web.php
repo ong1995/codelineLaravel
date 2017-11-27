@@ -21,10 +21,10 @@ Route::get('/login', function () {
 
 Route::get('/films/create', function () {
     return view('films.createFilm');
-});
+})->name('create');
 
 Route::get('/films/{slug}', 'FilmController@show')->name('film');
-Route::get('/films', 'FilmController@getFilmList');
+Route::get('/films', 'FilmController@getFilmList')->name('films');
 
 Route::post('/createFilms', 'CreateFilmController@store');	
 

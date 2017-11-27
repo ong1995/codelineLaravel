@@ -39,6 +39,10 @@
                     <a class="navbar-brand" href="{{ url('/films') }}">
                         Codeline.io
                     </a>
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="{{ route('films') }}">Films</a></li>
+                        <li><a href="{{ route('create') }}">Create films</a></li>
+                    </ul>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -82,10 +86,13 @@
         @yield('content')
     </div>
 </div>
+<meta name="_token" content="{!! csrf_token() !!}" />
 
 <!-- Scripts -->
 <script src="{{ asset('public/js/app.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="{{ URL::asset('public/js/utility.js') }}"></script>
+@yield('javascript')
+
 </body>
 </html>
