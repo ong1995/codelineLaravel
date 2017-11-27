@@ -11,12 +11,12 @@ class CreateFilmController extends Controller
 {
 	public function store(Request $request)
 	{
-		// store upload image 
+		// store the upload image in public/image 
 		// if($request->file('photo')){
 		// 	$filename = $request->file('photo')->getClientOriginalName();
 		// 	$request->file('photo')->storeAs('storage/public', $filename);
 		// }
-		
+		// dd($request);
 
 		$film = Film::create([
 			'name' => $request->name,
