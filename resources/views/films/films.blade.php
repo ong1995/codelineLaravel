@@ -40,6 +40,7 @@
 	</div>
 	@endif
 	<div class="display-comment">
+	<h2>Comments...</h2>
 		@foreach($comments as $comment)
 		<div class="user-comment">
 			<div class="user-name"> {{ $comment->user->name }} <i class="fa fa-comment-o pull-right"></i></div>
