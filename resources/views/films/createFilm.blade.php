@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.app')
 @section('title')
 Create film
 @endsection
@@ -7,7 +7,7 @@ Create film
 <div class="text-center">
 	<h2>Add Films</h2>
 </div>
-<form id="createForm" >
+<form id="createForm" action="createFilms">
 	<div class="row">
 		<div class="col-md-6">
 			<div class="form-group">
