@@ -11,7 +11,7 @@ class CommentsTableSeeder extends Seeder
      */
     public function run()
     {
-    	DB::table('comments')->insert(
+    	DB::table('comments')->insert([
     		[
     		'user_id' => 1,
     		'film_id' => 1,
@@ -34,7 +34,7 @@ class CommentsTableSeeder extends Seeder
     		'user_id' => 3,
     		'film_id' => 4,
     		'comment' => 'The best!',
-    		],
-    		);
+    		]
+    		]);
     }
 }
